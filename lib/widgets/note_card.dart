@@ -6,10 +6,9 @@ class NoteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
       width: 300,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: const Color.fromARGB(255, 245, 218, 139),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -19,7 +18,10 @@ class NoteCard extends StatelessWidget {
           ListTile(
             title: Text("Flutter Tips"),
             textColor: Colors.black,
-            trailing: IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.delete, size: 30),
+            ),
             iconColor: Colors.black,
           ),
           Padding(

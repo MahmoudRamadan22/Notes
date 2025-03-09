@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
           child: NotesViewBody(),
         ),
       ),
