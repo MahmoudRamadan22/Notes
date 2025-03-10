@@ -5,18 +5,29 @@ class CustomTextField extends StatelessWidget {
     super.key,
     required this.hintText,
     required this.label,
-    required this.onSubmitted,
+    required this.onSaved,
     required this.contentPadding,
   });
   final String label;
   final String hintText;
-  final ValueChanged<String>? onSubmitted;
+  final FormFieldSetter onSaved;
   final EdgeInsetsGeometry? contentPadding;
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      onSubmitted: onSubmitted,
+    return TextFormField(
+      validator: (value) {
+        if (value!.isEmpty) {
+          return "field required";
+        } else {
+          return null;
+        }
+      },
+      onSaved: onSaved,
       decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderSide: BorderSide(width: 1.5, color: Colors.grey),
+          borderRadius: BorderRadius.circular(10),
+        ),
         contentPadding: contentPadding,
         hintText: hintText,
         label: Text(label),

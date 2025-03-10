@@ -17,14 +17,14 @@ class NoteEditViewBody extends StatelessWidget {
             CustomTextField(
               hintText: "Title",
               label: "Title",
-              onSubmitted: (value) {},
+              onSaved: (value) {},
               contentPadding: EdgeInsets.only(left: 10),
             ),
             SizedBox(height: 20),
             CustomTextField(
               hintText: "Content",
               label: "Content",
-              onSubmitted: (value) {},
+              onSaved: (value) {},
               contentPadding: EdgeInsets.only(left: 10, top: 85),
             ),
           ],
