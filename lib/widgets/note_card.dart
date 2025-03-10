@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class NoteCard extends StatelessWidget {
-  const NoteCard({super.key});
-
+  const NoteCard({super.key, required this.color});
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 300,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 245, 218, 139),
+        color: color,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(

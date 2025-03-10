@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/widgets/custom_floating_action_button.dart';
 import 'package:notes/widgets/notes_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,10 +9,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
-          child: NotesViewBody(),
-        ),
+        floatingActionButton: CustomFloatingActionButton(),
+        body: NotesViewBody(),
       ),
     );
   }
