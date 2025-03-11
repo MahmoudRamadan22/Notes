@@ -7,6 +7,7 @@ import 'package:notes/constants.dart';
 part 'add_note_state.dart';
 
 class AddNoteCubit extends Cubit<AddNoteState> {
+  bool isLoading = false;
   AddNoteCubit() : super(AddNoteInitial());
   addNote(NoteModel note) async {
     emit(AddNoteLoading());
